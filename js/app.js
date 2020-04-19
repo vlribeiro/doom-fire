@@ -89,8 +89,15 @@ const fireInfo = {
         canvasInfo.pixelSize
       );
 
+      const strokeDecrement = 30;
       canvasInfo.context.lineWidth = 0.5;
-      canvasInfo.context.strokeStyle = "#1a202c";
+      canvasInfo.context.strokeStyle = `rgb(${Math.max(
+        fireColorsPalette[v].r - strokeDecrement,
+        0
+      )},${Math.max(fireColorsPalette[v].g - strokeDecrement, 0)},${Math.max(
+        fireColorsPalette[v].b - strokeDecrement,
+        0
+      )})`;
       canvasInfo.context.strokeRect(
         pixelX,
         pixelY,

@@ -98,6 +98,17 @@ const fireInfo = {
         canvasInfo.pixelSize
       );
 
+      const random = Math.random();
+
+      canvasInfo.canvas.style.setProperty(
+        "--light1-opacity",
+        0.1 + random / 100
+      );
+      canvasInfo.canvas.style.setProperty(
+        "--light2-opacity",
+        0.04 + random / 1000
+      );
+
       if (showInfo) this.renderInfo();
     }
   },
